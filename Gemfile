@@ -52,7 +52,7 @@ gem 'htmlentities', '~> 4.3.4'
 gem 'nokogiri', '~> 1.6.0'
 gem 'figaro'
 gem 'puma'
-gem 'net-ssh', '~> 2.7.0'
+gem 'net-ssh', '~> 2.8.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
