@@ -1,0 +1,3 @@
+== Blog
+
+This is the Hello World Project to get familiar with git and Ruby on Rails and to understand the workflow which must be followed when developing software products in a team.
