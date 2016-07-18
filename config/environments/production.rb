@@ -76,4 +76,21 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  
+  config.action_mailer.default_url_options = { host: 'http://ec2-52-33-196-115.us-west-2.compute.amazonaws.com/', protocol: 'http'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    domain: 'mail.google.com',
+    port: 587,
+    user_name: Rails.application.secrets.gmail_username,
+    password: Rails.application.secrets.gmail_password,
+    authentication: 'plain',
+    enable_starttls_auto: true
+  }
+
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
