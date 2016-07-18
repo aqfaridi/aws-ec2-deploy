@@ -315,7 +315,7 @@ DEPENDENCIES
   capistrano3-puma
   coffee-rails (~> 4.1.0)
   devise (~> 4.1.1)
-  execjs
+  execjs (>= 2.2.2)
   figaro
   friendly_id (~> 5.1.0)
   haml-rails (~> 0.9.0)
