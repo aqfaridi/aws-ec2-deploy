@@ -41,11 +41,12 @@
 #
 # Global options
 # --------------
-#  set :ssh_options, {
-#    keys: %w(/home/rlisowski/.ssh/id_rsa),
-#    forward_agent: false,
-#    auth_methods: %w(password)
-#  }
+set :ssh_options, {
+  user: 'aqfaridi', # overrides user setting above
+  keys: %w(/users/aqfaridi/.ssh/id_rsa),
+  forward_agent: false,
+  auth_methods: %w(publickey password)
+}
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------
@@ -59,4 +60,4 @@
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-server '52.24.4.78', user: 'deploy', roles: %w{web app db}
+server 'ec2-52-33-196-115.us-west-2.compute.amazonaws.com', user: 'deploy', roles: %w{web app db}
