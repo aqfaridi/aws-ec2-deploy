@@ -60,4 +60,4 @@ set :ssh_options, {
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
-server 'ec2-52-33-196-115.us-west-2.compute.amazonaws.com', user: 'deploy', roles: %w{web app db}
+server 'ec2-52-40-47-131.us-west-2.compute.amazonaws.com', user: 'deploy', roles: %w{web app db}
