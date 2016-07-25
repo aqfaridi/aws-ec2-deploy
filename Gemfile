@@ -56,6 +56,7 @@ gem 'nokogiri', '~> 1.6.0'
 gem 'figaro'
 gem 'puma'
 gem 'net-ssh', '~> 2.8.0'
+gem "sentry-raven"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

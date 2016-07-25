@@ -34,8 +34,12 @@ class ArticlesController < ApplicationController
     if @article.save
       @article.update_related!
       @article.related.each { |p| p.update_related! }
-      ArticleMailer.article_created(current_user,@article).deliver
-      flash[:success] = 'Article has been created successfully !!'
+      begin
+        ArticleMailer.article_created(current_user,@article).deliver      
+        flash[:success] = 'Article has been created successfully !!'
+      rescue MailNotDelivered => exception
+        Raven.capture_exception(exception)
+      end
       redirect_to @article
     else
       render 'new'
