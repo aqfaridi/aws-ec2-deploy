@@ -164,6 +164,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.8.0)
+    newrelic_rpm (3.16.0.318)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
@@ -331,6 +332,7 @@ DEPENDENCIES
   mail (~> 2.6.4)
   mysql2 (~> 0.4.4)
   net-ssh (~> 2.8.0)
+  newrelic_rpm
   nokogiri (~> 1.6.0)
   paperclip (~> 4.3.6)
   pg (~> 0.18.4)
